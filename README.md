@@ -21,13 +21,12 @@ https://github.com/burnsgirl/E-Commerce-Back-End
 [Contact](#contact)
 
 ## Installation
-To use this application, you will need to install Inquirer, Express, and Node. To do so you will need to run npm i in the command line. You will also need mysql run.
-
+To use this application, you will need to install Express, Sequalize, and SQL. To do so you will need to run npm i in the command line. 
 ## Usage
 
 
 ## Technologies
-Technologies used: JavaScript, Node, Inquirer, SQL, Express
+Technologies used: JavaScript, SQL, Express, Sequalize
 
 ## License
 License: None

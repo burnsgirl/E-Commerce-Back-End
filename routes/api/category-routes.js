@@ -6,8 +6,8 @@ const { Category, Product } = require('../../models');
 router.get('/', (req, res) => {
   // find all categories
   // be sure to include its associated Products
-  Category.findAll({include: [{model: Product}]}).then((catergoryData) => {
-    res.json(catergoryData);
+  Category.findAll({include: [{model: Product}]}).then((categoryData) => {
+    res.json(categoryData);
   });
 });
 
@@ -17,38 +17,36 @@ router.get('/:id', (req, res) => {
   Category.findOne({
     where: {
       id: req.params.id
-    }, include: [Product]}).then((res) => {
-    res.json(res);
+    }, include: [Product],
+  }).then((yolo) => {
+    res.json(yolo);
   });
 });
 
 router.post('/', (req, res) => {
   // create a new category
-  Catergory.create(req.body)
-  .then((catergory) => {
-    res.json(catergory);
+  Category.create(req.body)
+  .then((category) => {
+    res.json(category);
   });
 });
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
-  Category.update(
-    {
-      id: req.body.id
-    },
+  Category.update(req.body,
     {
       where: {
         id: req.params.id
       },
-    },
-  ).then ((updatedCatergory) => {
-    res.json(updatedCatergory);
+    })
+  .then ((updatedCategory) => {
+    res.json(updatedCategory);
   });
 });
 
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
-  Catergory.destroy({
+  Category.destroy({
     where: {
       id: req.params.id
     },

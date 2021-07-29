@@ -18,8 +18,8 @@ router.get('/:id', (req, res) => {
   Tag.findOne({
     where: {
       id: req.params.id
-    }, include: [{model: Product}]}).then((res) => {
-    res.json(res);
+    }, include: [Product]}).then((yolo) => {
+    res.json(yolo);
   });
 });
 
@@ -33,16 +33,12 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
-  Tag.update(
-    {
-      id: req.body.id
+  Tag.update(req.body, {
+    where: {
+      id: req.params.id
     },
-    {
-      where: {
-        id: req.params.id
-      },
-    },
-  ).then ((updatedTag) => {
+  })
+  .then ((updatedTag) => {
     res.json(updatedTag);
   });
 });

@@ -4,9 +4,7 @@
 
 <img src="Assets/one.png">
 
-https://github.com/burnsgirl/E-Commerce-Back-End
-
-https://drive.google.com/file/d/1d-eLcuCKhKCvXipLULuTpI97IdOFuZoR/view?usp=sharing
+[Repo](https://github.com/burnsgirl/E-Commerce-Back-End)   |    [Deployed](https://drive.google.com/file/d/1d-eLcuCKhKCvXipLULuTpI97IdOFuZoR/view?usp=sharing)
 
 ## Description
 This is a back end application for a e-commerce site. This application can be tested with Insomnia and it is run with Express and Sequalize.
